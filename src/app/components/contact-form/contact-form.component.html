@@ -1,0 +1,12 @@
+<div class="contact-form-container">
+  <h2>{{ contact.id ? 'Edit' : 'Add' }} Contact</h2>
+  <form (ngSubmit)="saveContact()">
+    <label for="name">Name</label>
+    <input id="name" [(ngModel)]="contact.name" name="name" required>
+
+    <label for="phoneNumber">Phone Number</label>
+    <input id="phoneNumber" [(ngModel)]="contact.phoneNumber" name="phoneNumber" required>
+
+    <button type="submit">{{ contact.id ? 'Update' : 'Add' }}</button>
+  </form>
+</div>
